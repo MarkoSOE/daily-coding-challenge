@@ -12,3 +12,11 @@ function boolToWord(bool){
         return "No"
     }
 }
+
+
+//alternative answer 
+
+function boolToWordTwo(bool){
+    //using a ternary is optimal when there's two possibilities (true or false). The expression to the left of the ':' is returned if the expression bool is evaluated to true, otherwise the expression on the right is returned.
+    return bool ? 'Yes' : 'No'
+}

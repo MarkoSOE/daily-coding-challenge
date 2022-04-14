@@ -13,4 +13,3 @@ function countBy(x,n){
     //return the array
     return z;
 }
-

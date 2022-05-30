@@ -48,7 +48,7 @@ let diffLanguages = {
 }
 
 function greet(language){
-    return diffLanguages[language] == undefined ? diffLanguages[english] : diffLanguages[language] 
+    return diffLanguages[language] == undefined ? diffLanguages["english"] : diffLanguages[language] 
 }
 
 console.log(greet('english'))

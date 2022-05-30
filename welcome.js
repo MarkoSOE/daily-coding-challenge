@@ -51,5 +51,7 @@ function greet(language){
     return diffLanguages[language] == undefined ? diffLanguages["english"] : diffLanguages[language] 
 }
 
-console.log(greet('english'))
-console.log(greet('serbian'))
+
+//we can also return this: 
+
+// return diffLanguages[language] || diffLanguages["english"]

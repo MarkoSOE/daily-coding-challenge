@@ -23,5 +23,6 @@ function duplicateCount(text){
     text.split('').forEach((element) => {
 
       
+      
     })
   }

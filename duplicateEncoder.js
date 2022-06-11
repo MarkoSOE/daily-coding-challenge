@@ -10,6 +10,21 @@
 
 function duplicateEncode(word){
     // ...
-    word.split('').map( (element,index) => {
-    })
+    return word.split('').map( (element) => {
+        let counter = 0;
+        for(i = 0; i < word.length; i++){
+            if(element == word[i]){
+                counter += 1;
+            }
+        }
+        if(counter > 1){
+            return ")"
+        }
+        else{
+            return "("
+        }
+    }).join('')
 }
+
+console.log(duplicateEncode('din'));
+console.log(duplicateEncode('recede'));

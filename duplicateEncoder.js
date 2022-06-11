@@ -11,7 +11,5 @@
 function duplicateEncode(word){
     // ...
     word.split('').map( (element,index) => {
-
-        
     })
 }

@@ -14,14 +14,19 @@ function duplicateCount(text){
     //...
     
     //set a counter for the amount of times a duplicate occurs
-    let dupcounter= 0;
-
+    
     // want to split the string into an array
-
+    
     // for each element, take the element and see if it occurs again in the array, if it does then add 1 to the dupcounter 
-
+    let dupecounter = 0;
     text.split('').forEach((element) => {
-
-      
+      for (let i = 0; i < text.length; i++){
+        if (element === text[i]){
+          dupecounter += 1;
+        }
+      }
     })
+    return dupecounter;
   }
+
+  console.log(duplicateCount('abcde'))

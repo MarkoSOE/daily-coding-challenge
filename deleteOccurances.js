@@ -6,16 +6,11 @@
 function deleteNth(arr,n){
     // ...
     //asking for a new list so we have to use the map method
-
-    return arr.map((element) =>{
-        let counter = 0;
-        for(let i = 0; i < arr.length; i++){
-            if(element == arr[i]){
-                counter += 1;
-            }
-            if(counter < n){
-                return element
-            }
+    return arr.map(element => {
+        let counter = 1;
+        for(let i = 0; i < arr[i]; i++){
+            
         }
+
     })
   }

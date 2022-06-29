@@ -18,9 +18,11 @@
 var number = function(busStops){
     // Good Luck!
     //make a loop that iterates through the number of elements in the array
+    let geton = 0;
+    let getoff = 0;
     for(let i = 0; i < busStops.length; i++){
-
-        
+        geton += busStops[i][0]
+        getoff += busStops[i][1]
     }
-
+    return geton-getoff
 }

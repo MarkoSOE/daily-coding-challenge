@@ -9,10 +9,17 @@
 // Please keep in mind that the test cases ensure that the number of people in the bus is always >= 0. So the return integer can't be negative.
 
 // The second value in the first integer array is 0, since the bus is empty in the first bus stop.
+
+// [number of people getting on bus, number of people getting off the bus]
+
+// want to return the amoujnt of people who are still left at the end
+
+// it's just the sum of the first number minus the sum of the second number
 var number = function(busStops){
     // Good Luck!
     //make a loop that iterates through the number of elements in the array
     for(let i = 0; i < busStops.length; i++){
+
         
     }
 

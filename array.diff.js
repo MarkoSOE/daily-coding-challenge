@@ -14,7 +14,6 @@ function arrayDiff(a, b) {
             if(b[i] == element){
                 a.filter(item !== element)
             }
-            
         }
     })
     return a

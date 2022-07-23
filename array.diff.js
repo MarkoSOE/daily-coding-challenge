@@ -8,15 +8,10 @@
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
 function arrayDiff(a, b) {
-    let newarr = []
-    a.forEach(element =>{
-        for(var i = 0; i < b.length;i++){
-            if(b[i] == element){
-                a.filter(item !== element)
-            }
-        }
+    return a.filter((element) => {
+        //if the element in the a array is not found in the b array, return it to the filter function and filter it out, leaving just that element that isn't in both arrays
+        return b.indexOf(element) < 0;
     })
-    return a
 }
 console.log(arrayDiff([1,2], [1]))
 console.log(arrayDiff([1,2,3], [1,2]))

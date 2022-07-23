@@ -18,6 +18,5 @@ function arrayDiff(a, b) {
     })
     return a
 }
-
 console.log(arrayDiff([1,2], [1]))
 console.log(arrayDiff([1,2,3], [1,2]))

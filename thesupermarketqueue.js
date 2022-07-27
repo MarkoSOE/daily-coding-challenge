@@ -29,8 +29,16 @@
 
 // P.S. The situation in this kata can be likened to the more-computer-science-related idea of a thread pool, with relation to running multiple processes at the same time: https://en.wikipedia.org/wiki/Thread_pool
 
-function queueTime(customers, n) {
-    //sum up all elements of the array
-    let value = customers.reduce((sum, current) => sum + current, 0)
-    return value*n
-}
+function queueTime(customers, registers) {
+    let arr = [];
+  
+    for(let i = 0; i < registers; i++)
+      arr[i] = 0;
+  
+    for(let i = 0; i < customers.length; i++) {
+      arr[0] += customers[i];
+      arr.sort((a, b) => a - b);
+    }
+  
+    return arr[arr.length - 1];
+  }

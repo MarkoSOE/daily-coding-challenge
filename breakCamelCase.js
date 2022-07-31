@@ -7,5 +7,8 @@
 
 // complete the function
 function solution(string) {
-    
+    return string.match(/[A-Z][a-z]+/g).
 }
+
+console.log(solution('camelCasing'))
+console.log(solution('camelCasingTest'))

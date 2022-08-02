@@ -7,7 +7,7 @@
 
 // complete the function
 function solution(string) {
-    return string.match(/[A-Z][a-z]+/g).
+    return string.split(/(?=[A-Z])/).join(' ')
 }
 
 console.log(solution('camelCasing'))

@@ -20,11 +20,24 @@
 
 var humanYearsCatYearsDogYears = function(humanYears) {
     // Your code here!
-    let catYears, dogYears = 0
-    if(humanYears == 1){
-        catYears, dogYears += 15
+    let catYears = 0
+    let dogYears = 0
+    for(let i = humanYears ; i > 0 ; i--){
+        if(i == 1){
+            catYears += 15
+            dogYears += 15
+        }
+        else if(i == 2){
+            catYears +=9
+            dogYears += 9
+        }
+        else{
+            catYears += 4
+            dogYears += 5
+        }
+
     }
-    if(humanYears == 2)
-    return [0,0,0];
+    return [humanYears,catYears,dogYears];
   }
   
+  console.log(humanYearsCatYearsDogYears(10))

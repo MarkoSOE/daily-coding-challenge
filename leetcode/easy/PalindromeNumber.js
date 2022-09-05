@@ -27,5 +27,15 @@
 // -231 <= x <= 231 - 1
 
 const isPalindrome = (x) => {
-
+    let reversearr = []
+    let reverseword = ''
+    for(let i = 0; i < x.toString().split('').length; i++){
+        reversearr.push(x.toString().split('')[i])
+    }
+    for(let i = 0; i < x.toString().split('').length; i++){
+        reverseword += reversearr.pop()
+    }
+    return reverseword == x.toString()
 }
+
+console.log(isPalindrome(121))

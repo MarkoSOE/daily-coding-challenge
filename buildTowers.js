@@ -18,3 +18,19 @@
 //   " ********* ", 
 //   "***********"
 // ]
+
+function towerBuilder(nFloors) {
+    let arr = []
+    let base = nFloors*2-1;
+    let hashes = 1;
+    for(let i = 0; i < nFloors; i++){
+        let difference = (base - hashes)/2 
+        let spaces = ' '.repeat(difference)
+        let stars = '*'.repeat(hashes)
+
+        arr.push(spaces + stars + spaces)
+
+        hashes += 2 
+    }
+    return arr
+}

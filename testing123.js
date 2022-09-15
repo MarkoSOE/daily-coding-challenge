@@ -11,5 +11,9 @@
 
 
 var number = function(array){
-    
+    newarr = []
+    array.forEach((element,index) => {
+        newarr.push(`${index+1}: ${element}`)
+    })
+    return newarr
 }

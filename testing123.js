@@ -17,3 +17,12 @@ var number = function(array){
     })
     return newarr
 }
+
+//alternative solution using arr.map
+
+
+var number = function(array){
+    return array.map((element,index) => {
+        return `${index+1}: ${element}`
+    })
+}

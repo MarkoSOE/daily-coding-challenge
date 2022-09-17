@@ -4,5 +4,5 @@
 
 function isTriangle(a,b,c)
 {
-   return false;
+   return a + b > c && a + c > b && c + b > a;
 }

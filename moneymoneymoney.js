@@ -11,6 +11,10 @@
 //   Let T be the Tax Rate = 0.18      
 //   Let D be the Desired Sum = 1100.00
 
+// P + I*P -T*I*P 
+// 1000 + 50 - 9 = 1041
+
+// 1041 + 52.05 - 9.369 = 1083.68
 
 // After 1st Year -->
 //   P = 1041.00
@@ -26,4 +30,15 @@
 
 function calculateYears(principal, interest, tax, desired) {
     // your code
+    let count = 0
+    let accruedsum = principal
+    while(accruedsum < desired){
+        accruedsum = accruedsum + interest*accruedsum - tax*interest*accruedsum
+        count ++
+    }
+    return count
+
 }
+
+console.log(calculateYears(1000, 0.05, 0.18, 1100))
+console.log(calculateYears(1000,0.01625,0.18,1200))

@@ -8,5 +8,13 @@
 
 function persistence(num) {
     //code me
-    
+    let counter = 0;
+    let resultnum = 100;
+    while(resultnum.split('').length > 1){
+        //take the number provided and mulitply the individual components
+        resultnum = num.split('').reduce((acc,element) => acc * element, 0)
+        //reset the num to be the resultnum
+        num = resultnum
+    }
+
 }

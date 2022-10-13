@@ -8,13 +8,24 @@
 
 function persistence(num) {
     //code me
-    let counter = 0;
-    let resultnum = 100;
-    while(resultnum.split('').length > 1){
-        //take the number provided and mulitply the individual components
-        resultnum = num.split('').reduce((acc,element) => acc * element, 0)
-        //reset the num to be the resultnum
-        num = resultnum
-    }
-
+    let counter = 0
+    do{
+        //convert the number provided into an array of numbers
+        let digits = []
+        while(num > 0){
+            digits.unshift(num%10);
+            num = Math.trunc(num/10)
+        }
+        if(digits.length > 1){
+            //want to reduce this arr into a single value
+            num = digits.reduce((acc,element) => acc * element, 1)
+            //increment the count
+            counter ++ 
+        }
+        else{
+            return counter
+        }
+    }while(num.toString().split('').length > 1)
+    
+    return counter
 }

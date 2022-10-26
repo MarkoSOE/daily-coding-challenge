@@ -4,4 +4,34 @@
 
 function isValidWalk(walk) {
     //insert brilliant code here
+    //if the walk is not 10 minutes long, return false
+    if(walk.length !== 10){
+        return false
+    }
+    //if the walk is 10 minutes long, check to see if it returns you to the starting point
+    // keep track of the amount of times we go in any direction
+    let north = 0
+    let south = 0
+    let east = 0
+    let west = 0
+    //iterate through the array
+    for(let i = 0; i < walk.length; i ++){
+        if(walk[i] === 'n'){
+            north ++
+        }
+        else if(walk[i] === 's'){
+            south ++
+        }
+        else if(walk[i] === 'e'){
+            east ++
+        }
+        else if(walk[i] === 'w'){
+            west ++
+        }
+    }
+    if(north === south && east === west){
+        return true
+    }else{
+        return false
+    }
   }
